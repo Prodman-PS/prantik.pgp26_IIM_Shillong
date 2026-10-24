@@ -6,22 +6,24 @@ Submission for the **Happiest Health *Reimagining and Reforming Healthcare in In
 
 ## Submission checklist
 
-| Required item | Where |
-|---|---|
-| Team details | [Team details](#team-details) |
-| College / incubator information | [College / incubator information](#college--incubator-information) |
-| Project title | [Project title](#project-title) |
-| Problem statement | [Problem statement](#problem-statement) |
-| Healthcare use case | [Healthcare use case](#healthcare-use-case) |
-| Technical stack | [Technical stack](#technical-stack) |
-| AI/ML model or framework details | [AI/ML model and framework details](#aiml-model-and-framework-details) |
-| Demo video (15–20 min, unlisted YouTube) | [Demo video](#demo-video) |
-| Open-source licence | [Open-source licence](#open-source-licence) · [`LICENSE`](LICENSE) |
-| Architecture diagram (PDF / PPT) | [Architecture diagram](#architecture-diagram) · [`docs/architecture.pdf`](docs/architecture.pdf) · [`docs/architecture.pptx`](docs/architecture.pptx) |
-| Presentation (PDF / PPT) | [Presentation](#presentation-pdf--ppt--project-details-and-outcomes) · [`docs/presentation.pdf`](docs/presentation.pdf) · [`docs/presentation.pptx`](docs/presentation.pptx) |
-| Public access | [Access](#access) |
+| # | Required item | Section in this README |
+|---|---|---|
+| 1 | Team details | [1. Team details](#1-team-details) |
+| 2 | College / incubator information | [2. College / incubator information](#2-college--incubator-information) |
+| 3 | Project Title | [3. Project Title](#3-project-title) |
+| 4 | Problem Statement | [4. Problem Statement](#4-problem-statement) |
+| 5 | Healthcare Use Case | [5. Healthcare Use Case](#5-healthcare-use-case) |
+| 6 | Technical Stack | [6. Technical Stack](#6-technical-stack) |
+| 7 | AI/ML Model or Framework Details | [7. AI/ML Model or Framework Details](#7-aiml-model-or-framework-details) |
+| 8 | Minimum 20-minute Demo Video (Unlisted YouTube) | [8. Demo Video (Unlisted YouTube)](#8-demo-video-unlisted-youtube) |
+| 9 | Open-source License Details | [9. Open-source License Details](#9-open-source-license-details) · [`LICENSE`](LICENSE) |
+| 10 | Architecture Diagram in PDF/PPT format | [10. Architecture Diagram (PDF / PPT)](#10-architecture-diagram-pdf--ppt) · [`docs/architecture.pdf`](docs/architecture.pdf) · [`docs/architecture.pptx`](docs/architecture.pptx) |
+| 11 | Presentation in PDF/PPT format covering project details and outcomes | [11. Presentation (PDF / PPT) — Project Details and Outcomes](#11-presentation-pdf--ppt--project-details-and-outcomes) · [`docs/presentation.pdf`](docs/presentation.pdf) · [`docs/presentation.pptx`](docs/presentation.pptx) |
+| 12 | All files and links are publicly accessible without additional permissions | [12. Public Access](#12-public-access) |
 
-## Team details
+---
+
+## 1. Team details
 
 | Role | Name | Roll No. | Programme | Email | Phone |
 |---|---|---|---|---|---|
@@ -29,19 +31,25 @@ Submission for the **Happiest Health *Reimagining and Reforming Healthcare in In
 | **Team Member** | **Swapnil Ghatak** | `2026PGP259` | PGP 2026–28 (MBA) | `swapnil.pgp26@iimshillong.ac.in` / `swapnilghatak@gmail.com` | — |
 
 - **Team Name:** **`prantik.pgp26`**
-- **Submission Folder Name:** **`prantik.pgp26_IIM_Shillong`**
-- **GitHub Repository:** **`https://github.com/Prodman-PS/prantik.pgp26_IIM_Shillong`**
+- **Submission Folder / Repository Name (`Team Name_College Name`):** **`prantik.pgp26_IIM_Shillong`**
+- **Public GitHub Repository Link:** **`https://github.com/Prodman-PS/prantik.pgp26_IIM_Shillong`**
 
-## College / incubator information
+---
+
+## 2. College / incubator information
 
 - **College:** **Indian Institute of Management Shillong (IIM Shillong)**, Umsawli, Shillong, Meghalaya – 793018, India
 - **Incubator:** Not applicable
 
-## Project title
+---
+
+## 3. Project Title
 
 **IBD Digital Twin: a virtual patient that predicts inflammatory bowel disease flares weeks ahead by fusing EHR data with smartwatch signals**
 
-## Problem statement
+---
+
+## 4. Problem Statement
 
 **Inflammatory bowel disease (IBD)** — ulcerative colitis (UC) and Crohn's disease (CD) — is a lifelong, relapsing-remitting inflammation of the gut. There is no cure; care is about keeping patients out of flares.
 
@@ -57,7 +65,9 @@ Today, care is **reactive**: the patient travels to a specialist after the flare
 
 No one has combined these signals into a digital twin a doctor can use.
 
-## Healthcare use case
+---
+
+## 5. Healthcare Use Case
 
 **Who:** a gastroenterologist managing IBD patients between visits. Patients include rural ones far from a specialist.
 
@@ -73,24 +83,6 @@ No one has combined these signals into a digital twin a doctor can use.
 
 **Outcome:** teleconsult the right patient weeks before a flare instead of treating it after a hospital visit. It's a *blood-pressure cuff for gut inflammation*.
 
-## Demo video
-
-**▶ [Watch the 27-Minute Prototype & Presentation Video (Unlisted YouTube: https://youtu.be/zaEuDdV3grc)](https://youtu.be/zaEuDdV3grc)**
-
-Running order and script: [`docs/video_script.md`](docs/video_script.md).
-
-## Open-source licence
-
-Released under the **MIT Licence** ([`LICENSE`](LICENSE)). This covers all code, the synthetic dataset, the trained model files and the documents in `docs/`. The third-party libraries keep their own licences: pandas, numpy, scikit-learn and pyarrow (BSD-3-Clause); LightGBM (MIT); Streamlit and Plotly (Apache-2.0 / MIT).
-
-## Access
-
-The repository is public. Every file and link in this README opens without sign-in or extra permissions:
-- The architecture diagram, presentation and screenshots are committed in `docs/`.
-- The video is an unlisted (not private) YouTube link.
-
-## What the twin does
-
 | | Digital-twin function | In this prototype |
 |---|---|---|
 | **Mirror** | A live copy of the patient against their *own* baseline | Fuses EHR + wearables + symptoms + labs into one row per patient-day, comparing each signal with the patient's personal median / MAD on quiet days |
@@ -99,44 +91,9 @@ The repository is public. Every file and link in this README opens without sign-
 | **Simulate** | What-if before acting | Re-scores today with adherence 100%, anti-TNF or no NSAIDs (labelled *model-estimated*) |
 | **Protect** | Emergencies and cancer safety | 6 emergency rules (hours-level) and a rule-based Cancer Safety panel (colonoscopy due dates, red flags) |
 
-## Architecture diagram
+---
 
-![architecture](docs/architecture.png)
-
-**PDF: [`docs/architecture.pdf`](docs/architecture.pdf) · PPTX: [`docs/architecture.pptx`](docs/architecture.pptx) · PNG: [`docs/architecture.png`](docs/architecture.png)**
-
-## Presentation (PDF / PPT) — project details and outcomes
-
-**PDF: [`docs/presentation.pdf`](docs/presentation.pdf) · PPTX: [`docs/presentation.pptx`](docs/presentation.pptx)**
-
-15-slide presentation deck covering:
-1. **Title & Overview:** *IBD Digital Twin — Predicting inflammatory bowel disease flares weeks before they hit* (`prantik.pgp26 · IIM Shillong`)
-2. **The Burden:** ~1.4M IBD patients in India (largest in Asia), peak age 20–40, 15-month median diagnostic delay costing 5.5× monthly household income (₹1.36 lakh), rural–urban parity vs tier-1 specialist concentration
-3. **The Opportunity:** 7-week smartwatch HRV/RHR/step pre-flare lead time (*Gastroenterology* 2025) + 3-month faecal calprotectin lead time (Antwerp cohort)
-4. **The Solution:** Mirror, Predict (14-day risk + 28-day outlook), Simulate (What-if therapy re-scoring), and Protect (6 emergency rules + BSG 2019 Cancer Safety surveillance)
-5. **System Architecture:** 5-layer one-way causal pipeline (`src/generator` → `src/features` → `src/models` → `src/alerts` → `src/dashboard`) with strict ground-truth isolation
-6. **The Synthetic Cohort:** 800 virtual Indian IBD patients × 365 days (seed 42) with 1,562 colds, 2,234 stress weeks, 565 NSAID courses, 286 gut infections, and realistic missingness
-7. **Method:** Personal quiet-day baselines (median/MAD), 290 causal rolling features, LightGBM vs Logistic regression, 5-fold patient-grouped CV, Platt calibration
-8. **Results on Held-Out Patients:** PR-AUC **0.881** (vs 0.844 logistic), AUROC **0.995**, **99.3% of flare onsets caught** (408/411), **15-day median lead time** (20 days on 28-day outlook), **0.038 false alarms / patient-month**
-9. **Stream Ablation (Models A–E):** Watch + EHR alone catches 68% of flares passively; home calprotectin lifts to 90% (PR-AUC 0.731); 30-second daily check-in reaches 99% (PR-AUC 0.881)
-10. **Patient Story (`P0001` Ananya, 28, Bengaluru):** Week 1 Low → Week 4 Rising watch drift → Week 5 High (`310 µg/g` calprotectin, `53%` outlook) → Week 6 therapy optimised → Week 9 flare averted
-11. **The Doctor Dashboard:** Population triage view, 10-panel Patient view, plain-English TreeSHAP drivers, What-if simulator, and longitudinal date replay
-12. **Safety Nets:** 6 hours-level emergency rules (< 0.005% false-alarm rate) and multi-year BSG 2019 colorectal cancer surveillance tracker
-13. **India Pathway:** Consumer smartwatches + ₹800 home calprotectin today → ethics & DPDP Act clinical pilot / CDSCO SaMD pathway next → investigational sweat sensors & COPD/heart-failure expansion later
-14. **Honest Limits:** Synthetic data caveats, non-causal What-if re-scoring, non-specific wearable signals, lab confounders, and clinical validation requirements
-15. **Summary & Outcomes:** Flares caught weeks ahead, emergencies flagged within hours, no missed surveillance colonoscopy
-
-There are five layers in one Python repo, and data flows one way:
-
-1. **Synthetic patients and streams** (`src/generator/`, already provided). 800 patients × 365 days, seed 42. Details in [`docs/data_generator.md`](docs/data_generator.md).
-2. **Fusion and personal baselines** (`src/features/`). 290 causal features per patient-day.
-3. **Prediction, explanation, what-if** (`src/models/`). Logistic baseline + LightGBM, grouped 5-fold CV, Platt calibration, TreeSHAP.
-4. **Alerts and safety rules** (`src/alerts/`). Trend alerts, emergency rules, Cancer Safety.
-5. **Doctor dashboard** (`src/dashboard/app.py`, Streamlit).
-
-**Ground truth never reaches the model.** `events.csv` and `ground_truth/` are used only to build labels and to evaluate. The lab `reason` / `setting` columns are dropped, because values like `"sepsis"` or `"twin_escalation"` encode hidden state. The only rows read from `events.csv` are ones a real clinic would know on the day: prescriptions (NSAID, antibiotic and steroid courses) and logged colds / gut infections. `tests/test_features.py::test_no_leakage` scrambles all data after day *t* and checks that every feature on or before *t* is unchanged.
-
-## Technical stack
+## 6. Technical Stack
 
 - **Language and data:** Python 3.11+, pandas, numpy, pyarrow (Parquet)
 - **ML:** scikit-learn (logistic regression baseline, grouped CV, calibration), **LightGBM** (main model), LightGBM's built-in **TreeSHAP** (`pred_contrib`, the same algorithm as `shap.TreeExplainer`)
@@ -145,7 +102,9 @@ There are five layers in one Python repo, and data flows one way:
 - **Synthetic data:** custom seeded generator (numpy + Faker). Synthea has no IBD module.
 - **Runs locally:** no cloud, no GPU; full training takes about 15 minutes on 2 CPU cores.
 
-## AI/ML model and framework details
+---
+
+## 7. AI/ML Model or Framework Details
 
 **Framework:** LightGBM gradient-boosted trees (main model) vs scikit-learn logistic regression (baseline), with TreeSHAP explanations.
 
@@ -160,7 +119,7 @@ There are five layers in one Python repo, and data flows one way:
 | Dashboard scores | Out-of-fold: each patient is scored by the model that never saw them |
 | 28-day outlook | Same inputs, folds and method with a 28-day horizon. Displayed next to the 14-day risk |
 
-## Results (held-out patients)
+### Results on Held-Out Patients
 
 **Main model (LightGBM D), 14-day flare onset**
 
@@ -187,7 +146,6 @@ There are five layers in one Python repo, and data flows one way:
 | **D (main)** | **B + daily symptom check-in** | **0.881** | **99%** | **0.038** |
 | E | D + sweat sensor | 0.878 | 99% | 0.032 |
 
-**Reading the ablation**
 - The watch alone (A) already finds two-thirds of flares, passively.
 - Periodic calprotectin (B) adds the most per data point.
 - The 30-second daily check-in (D) closes the gap. Within a 14-day window, rising symptoms are a strong precursor, and the flare definition requires symptoms.
@@ -207,6 +165,73 @@ Plots: [PR curve](artifacts/pr_curve.png) · [calibration](artifacts/calibration
 | TB reactivation | ≥ 2 low-grade fevers + ≥ 2 night sweats in 14 days + weight loss, on anti-TNF | P0016–P0017 |
 
 **Cancer Safety** rates P0013–P0015 high risk, with an overdue colonoscopy and red flags. Ananya is medium risk, with her colonoscopy due in 4 months.
+
+---
+
+## 8. Demo Video (Unlisted YouTube)
+
+**▶ [Watch the 27-Minute Prototype & Presentation Video (Unlisted YouTube: https://youtu.be/zaEuDdV3grc)](https://youtu.be/zaEuDdV3grc)**
+
+- **Duration:** 27 minutes 11 seconds (exceeds the minimum 20-minute requirement)
+- **Format:** Full HD 1080p presentation walkthrough + live Streamlit prototype demonstration (`http://localhost:8501`)
+- **Running order and script:** [`docs/video_script.md`](docs/video_script.md)
+
+---
+
+## 9. Open-source License Details
+
+Released under the **MIT License** ([`LICENSE`](LICENSE)). This covers all code, the synthetic dataset, the trained model files and the documents in `docs/`. The third-party libraries keep their own licences: pandas, numpy, scikit-learn and pyarrow (BSD-3-Clause); LightGBM (MIT); Streamlit and Plotly (Apache-2.0 / MIT).
+
+---
+
+## 10. Architecture Diagram (PDF / PPT)
+
+![architecture](docs/architecture.png)
+
+**PDF: [`docs/architecture.pdf`](docs/architecture.pdf) · PPTX: [`docs/architecture.pptx`](docs/architecture.pptx) · PNG: [`docs/architecture.png`](docs/architecture.png)**
+
+There are five layers in one Python repo, and data flows one way:
+
+1. **Synthetic patients and streams** (`src/generator/`, already provided). 800 patients × 365 days, seed 42. Details in [`docs/data_generator.md`](docs/data_generator.md).
+2. **Fusion and personal baselines** (`src/features/`). 290 causal features per patient-day.
+3. **Prediction, explanation, what-if** (`src/models/`). Logistic baseline + LightGBM, grouped 5-fold CV, Platt calibration, TreeSHAP.
+4. **Alerts and safety rules** (`src/alerts/`). Trend alerts, emergency rules, Cancer Safety.
+5. **Doctor dashboard** (`src/dashboard/app.py`, Streamlit).
+
+**Ground truth never reaches the model.** `events.csv` and `ground_truth/` are used only to build labels and to evaluate. The lab `reason` / `setting` columns are dropped, because values like `"sepsis"` or `"twin_escalation"` encode hidden state. The only rows read from `events.csv` are ones a real clinic would know on the day: prescriptions (NSAID, antibiotic and steroid courses) and logged colds / gut infections. `tests/test_features.py::test_no_leakage` scrambles all data after day *t* and checks that every feature on or before *t* is unchanged.
+
+---
+
+## 11. Presentation (PDF / PPT) — Project Details and Outcomes
+
+**PDF: [`docs/presentation.pdf`](docs/presentation.pdf) · PPTX: [`docs/presentation.pptx`](docs/presentation.pptx)**
+
+15-slide presentation deck covering project details and outcomes:
+1. **Title & Overview:** *IBD Digital Twin — Predicting inflammatory bowel disease flares weeks before they hit* (`prantik.pgp26 · IIM Shillong`)
+2. **The Burden:** ~1.4M IBD patients in India (largest in Asia), peak age 20–40, 15-month median diagnostic delay costing 5.5× monthly household income (₹1.36 lakh), rural–urban parity vs tier-1 specialist concentration
+3. **The Opportunity:** 7-week smartwatch HRV/RHR/step pre-flare lead time (*Gastroenterology* 2025) + 3-month faecal calprotectin lead time (Antwerp cohort)
+4. **The Solution:** Mirror, Predict (14-day risk + 28-day outlook), Simulate (What-if therapy re-scoring), and Protect (6 emergency rules + BSG 2019 Cancer Safety surveillance)
+5. **System Architecture:** 5-layer one-way causal pipeline (`src/generator` → `src/features` → `src/models` → `src/alerts` → `src/dashboard`) with strict ground-truth isolation
+6. **The Synthetic Cohort:** 800 virtual Indian IBD patients × 365 days (seed 42) with 1,562 colds, 2,234 stress weeks, 565 NSAID courses, 286 gut infections, and realistic missingness
+7. **Method:** Personal quiet-day baselines (median/MAD), 290 causal rolling features, LightGBM vs Logistic regression, 5-fold patient-grouped CV, Platt calibration
+8. **Results on Held-Out Patients:** PR-AUC **0.881** (vs 0.844 logistic), AUROC **0.995**, **99.3% of flare onsets caught** (408/411), **15-day median lead time** (20 days on 28-day outlook), **0.038 false alarms / patient-month**
+9. **Stream Ablation (Models A–E):** Watch + EHR alone catches 68% of flares passively; home calprotectin lifts to 90% (PR-AUC 0.731); 30-second daily check-in reaches 99% (PR-AUC 0.881)
+10. **Patient Story (`P0001` Ananya, 28, Bengaluru):** Week 1 Low → Week 4 Rising watch drift → Week 5 High (`310 µg/g` calprotectin, `53%` outlook) → Week 6 therapy optimised → Week 9 flare averted
+11. **The Doctor Dashboard:** Population triage view, 10-panel Patient view, plain-English TreeSHAP drivers, What-if simulator, and longitudinal date replay
+12. **Safety Nets:** 6 hours-level emergency rules (< 0.005% false-alarm rate) and multi-year BSG 2019 colorectal cancer surveillance tracker
+13. **India Pathway:** Consumer smartwatches + ₹800 home calprotectin today → ethics & DPDP Act clinical pilot / CDSCO SaMD pathway next → investigational sweat sensors & COPD/heart-failure expansion later
+14. **Honest Limits:** Synthetic data caveats, non-causal What-if re-scoring, non-specific wearable signals, lab confounders, and clinical validation requirements
+15. **Summary & Outcomes:** Flares caught weeks ahead, emergencies flagged within hours, no missed surveillance colonoscopy
+
+---
+
+## 12. Public Access
+
+The repository (`https://github.com/Prodman-PS/prantik.pgp26_IIM_Shillong`) is **Public**. Every file and link in this README opens without sign-in or additional permissions:
+- The architecture diagram (`docs/architecture.pdf`, `docs/architecture.pptx`) and presentation (`docs/presentation.pdf`, `docs/presentation.pptx`) are committed directly in `docs/`.
+- The 27-minute prototype and presentation video is hosted as an **Unlisted** (not private) YouTube video at [https://youtu.be/zaEuDdV3grc](https://youtu.be/zaEuDdV3grc).
+
+---
 
 ## The doctor dashboard
 

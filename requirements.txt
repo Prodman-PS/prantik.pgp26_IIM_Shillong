@@ -1,0 +1,13 @@
+numpy>=2.0
+pandas>=2.2
+faker>=30
+pytest>=8
+# Parquet I/O. Windows on ARM has no native wheel: use an x64 Python build.
+pyarrow>=17
+scikit-learn>=1.5
+lightgbm>=4.3
+matplotlib>=3.8
+streamlit>=1.50
+plotly>=5.20
+# Optional: the dashboard uses LightGBM's built-in TreeSHAP; install shap for notebooks / cross-checks.
+# shap>=0.46

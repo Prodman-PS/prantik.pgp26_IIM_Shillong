@@ -1,0 +1,220 @@
+{
+  "target": "flare_within_14d (onset in days t+1..t+14)",
+  "split": "5-fold grouped by patient",
+  "main_config": "D",
+  "main": {
+    "config": "D",
+    "inputs": "B + symptom check-ins (main model)",
+    "model": "lgbm",
+    "n_features": 290,
+    "auroc": 0.9952342746216237,
+    "pr_auc": 0.8809303553934338,
+    "brier": 0.006264907521165212,
+    "f1": 0.8095476548155567,
+    "sensitivity": 0.8590152320226709,
+    "specificity": 0.993919554809935,
+    "precision": 0.7654671717171717,
+    "positive_rate": 0.022580748372234397,
+    "n_rows": 250036,
+    "onsets": 411,
+    "onsets_detected": 408,
+    "event_sensitivity": 0.9927007299270073,
+    "median_lead_time_days": 14.0,
+    "mean_lead_time_days": 12.04656862745098,
+    "median_episode_lead_days": 15.0,
+    "false_alarms": 316,
+    "patient_months": 8214.060446780552,
+    "false_alarms_per_patient_month": 0.038470620230686786,
+    "amber_20pct": {
+      "event_sensitivity": 0.9951338199513382,
+      "median_lead_time_days": 14.0,
+      "false_alarms_per_patient_month": 0.05161880689180758
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "threshold": 0.3162777442566216,
+        "calibration": {
+          "a": 0.9041879255218984,
+          "b": -1.0549725877079867
+        },
+        "n_fit_patients": 512,
+        "n_val_patients": 128,
+        "best_iteration": 163
+      },
+      {
+        "fold": 1,
+        "threshold": 0.37027837072051295,
+        "calibration": {
+          "a": 0.9627497039201405,
+          "b": -1.1077867049817967
+        },
+        "n_fit_patients": 512,
+        "n_val_patients": 128,
+        "best_iteration": 134
+      },
+      {
+        "fold": 2,
+        "threshold": 0.2611815431969296,
+        "calibration": {
+          "a": 0.8001208359398378,
+          "b": -0.7453962588480469
+        },
+        "n_fit_patients": 512,
+        "n_val_patients": 128,
+        "best_iteration": 232
+      },
+      {
+        "fold": 3,
+        "threshold": 0.3532342574807089,
+        "calibration": {
+          "a": 0.8881659459622094,
+          "b": -1.3277969596144903
+        },
+        "n_fit_patients": 512,
+        "n_val_patients": 128,
+        "best_iteration": 237
+      },
+      {
+        "fold": 4,
+        "threshold": 0.2735863844349617,
+        "calibration": {
+          "a": 0.8078558944387824,
+          "b": -1.1732973710219128
+        },
+        "n_fit_patients": 512,
+        "n_val_patients": 128,
+        "best_iteration": 184
+      }
+    ]
+  },
+  "baseline": {
+    "config": "D",
+    "inputs": "B + symptom check-ins (main model)",
+    "model": "logistic",
+    "n_features": 290,
+    "auroc": 0.9900124511356846,
+    "pr_auc": 0.8444068415601267,
+    "brier": 0.007247056993888156,
+    "f1": 0.7918189730200174,
+    "sensitivity": 0.8057031526744598,
+    "specificity": 0.9947010925160604,
+    "precision": 0.7784052019164955,
+    "positive_rate": 0.022580748372234397,
+    "n_rows": 250036,
+    "onsets": 411,
+    "onsets_detected": 403,
+    "event_sensitivity": 0.9805352798053528,
+    "median_lead_time_days": 13.0,
+    "mean_lead_time_days": 11.513647642679901,
+    "median_episode_lead_days": 14.0,
+    "false_alarms": 316,
+    "patient_months": 8214.060446780552,
+    "false_alarms_per_patient_month": 0.038470620230686786,
+    "amber_20pct": {
+      "event_sensitivity": 0.9805352798053528,
+      "median_lead_time_days": 14.0,
+      "false_alarms_per_patient_month": 0.04212289430322034
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "threshold": 0.18898019194602966,
+        "calibration": {
+          "a": 0.4821835160255432,
+          "b": -2.7570018768310547
+        },
+        "n_fit_patients": 512,
+        "n_val_patients": 128
+      },
+      {
+        "fold": 1,
+        "threshold": 0.3328058123588562,
+        "calibration": {
+          "a": 0.4884655177593231,
+          "b": -3.2809789180755615
+        },
+        "n_fit_patients": 512,
+        "n_val_patients": 128
+      },
+      {
+        "fold": 2,
+        "threshold": 0.21725548803806305,
+        "calibration": {
+          "a": 0.4934951066970825,
+          "b": -3.0025715827941895
+        },
+        "n_fit_patients": 512,
+        "n_val_patients": 128
+      },
+      {
+        "fold": 3,
+        "threshold": 0.302680104970932,
+        "calibration": {
+          "a": 0.5220972299575806,
+          "b": -3.5180420875549316
+        },
+        "n_fit_patients": 512,
+        "n_val_patients": 128
+      },
+      {
+        "fold": 4,
+        "threshold": 0.19286753237247467,
+        "calibration": {
+          "a": 0.44294559955596924,
+          "b": -2.930685520172119
+        },
+        "n_fit_patients": 512,
+        "n_val_patients": 128
+      }
+    ]
+  },
+  "ablation": {
+    "A": {
+      "inputs": "Wearables + EHR",
+      "pr_auc": 0.565215875023435,
+      "auroc": 0.9580769096861592,
+      "event_sensitivity": 0.681265206812652,
+      "median_lead_time_days": 14.0,
+      "median_episode_lead_days": 16.0,
+      "false_alarms_per_patient_month": 0.0396880449215313
+    },
+    "B": {
+      "inputs": "A + labs (calprotectin, CRP, Hb...)",
+      "pr_auc": 0.7311026943461522,
+      "auroc": 0.9835629829513135,
+      "event_sensitivity": 0.8978102189781022,
+      "median_lead_time_days": 13.0,
+      "median_episode_lead_days": 13.0,
+      "false_alarms_per_patient_month": 0.028852965173015086
+    },
+    "C": {
+      "inputs": "B + sweat sensor (investigational)",
+      "pr_auc": 0.7341676802828399,
+      "auroc": 0.9854237585937833,
+      "event_sensitivity": 0.8978102189781022,
+      "median_lead_time_days": 14.0,
+      "median_episode_lead_days": 14.0,
+      "false_alarms_per_patient_month": 0.0331139515909709
+    },
+    "D": {
+      "inputs": "B + symptom check-ins (main model)",
+      "pr_auc": 0.8809303553934338,
+      "auroc": 0.9952342746216237,
+      "event_sensitivity": 0.9927007299270073,
+      "median_lead_time_days": 14.0,
+      "median_episode_lead_days": 15.0,
+      "false_alarms_per_patient_month": 0.038470620230686786
+    },
+    "E": {
+      "inputs": "D + sweat sensor (investigational)",
+      "pr_auc": 0.8777261367383725,
+      "auroc": 0.9947630086589039,
+      "event_sensitivity": 0.9902676399026764,
+      "median_lead_time_days": 13.0,
+      "median_episode_lead_days": 14.0,
+      "false_alarms_per_patient_month": 0.03238349677646419
+    }
+  },
+  "runtime_s": 777
+}

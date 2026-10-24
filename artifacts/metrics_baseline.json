@@ -1,0 +1,81 @@
+{
+  "config": "D",
+  "inputs": "B + symptom check-ins (main model)",
+  "model": "logistic",
+  "n_features": 290,
+  "auroc": 0.9900124511356846,
+  "pr_auc": 0.8444068415601267,
+  "brier": 0.007247056993888156,
+  "f1": 0.7918189730200174,
+  "sensitivity": 0.8057031526744598,
+  "specificity": 0.9947010925160604,
+  "precision": 0.7784052019164955,
+  "positive_rate": 0.022580748372234397,
+  "n_rows": 250036,
+  "onsets": 411,
+  "onsets_detected": 403,
+  "event_sensitivity": 0.9805352798053528,
+  "median_lead_time_days": 13.0,
+  "mean_lead_time_days": 11.513647642679901,
+  "median_episode_lead_days": 14.0,
+  "false_alarms": 316,
+  "patient_months": 8214.060446780552,
+  "false_alarms_per_patient_month": 0.038470620230686786,
+  "amber_20pct": {
+    "event_sensitivity": 0.9805352798053528,
+    "median_lead_time_days": 14.0,
+    "false_alarms_per_patient_month": 0.04212289430322034
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "threshold": 0.18898019194602966,
+      "calibration": {
+        "a": 0.4821835160255432,
+        "b": -2.7570018768310547
+      },
+      "n_fit_patients": 512,
+      "n_val_patients": 128
+    },
+    {
+      "fold": 1,
+      "threshold": 0.3328058123588562,
+      "calibration": {
+        "a": 0.4884655177593231,
+        "b": -3.2809789180755615
+      },
+      "n_fit_patients": 512,
+      "n_val_patients": 128
+    },
+    {
+      "fold": 2,
+      "threshold": 0.21725548803806305,
+      "calibration": {
+        "a": 0.4934951066970825,
+        "b": -3.0025715827941895
+      },
+      "n_fit_patients": 512,
+      "n_val_patients": 128
+    },
+    {
+      "fold": 3,
+      "threshold": 0.302680104970932,
+      "calibration": {
+        "a": 0.5220972299575806,
+        "b": -3.5180420875549316
+      },
+      "n_fit_patients": 512,
+      "n_val_patients": 128
+    },
+    {
+      "fold": 4,
+      "threshold": 0.19286753237247467,
+      "calibration": {
+        "a": 0.44294559955596924,
+        "b": -2.930685520172119
+      },
+      "n_fit_patients": 512,
+      "n_val_patients": 128
+    }
+  ]
+}

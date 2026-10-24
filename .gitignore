@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.streamlit/secrets.toml
+# Rebuilt in ~45 s by `make features` (134 MB, over GitHub's 100 MB file limit)
+data/features/

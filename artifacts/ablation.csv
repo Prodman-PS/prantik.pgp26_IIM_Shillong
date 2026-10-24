@@ -1,0 +1,7 @@
+model,inputs,n_features,pr_auc,auroc,brier,f1,sensitivity,specificity,event_sensitivity,median_lead_days,median_episode_lead_days,false_alarms_per_pt_month
+Logistic (D inputs),B + symptom check-ins (main model),290,0.844,0.99,0.0072,0.792,0.806,0.995,0.981,13.0,14.0,0.038
+LightGBM A,Wearables + EHR,236,0.565,0.958,0.0136,0.577,0.554,0.992,0.681,14.0,16.0,0.04
+LightGBM B,"A + labs (calprotectin, CRP, Hb...)",265,0.731,0.984,0.0101,0.695,0.687,0.993,0.898,13.0,13.0,0.029
+LightGBM C,B + sweat sensor (investigational),277,0.734,0.985,0.0099,0.703,0.718,0.993,0.898,14.0,14.0,0.033
+LightGBM D,B + symptom check-ins (main model),290,0.881,0.995,0.0063,0.81,0.859,0.994,0.993,14.0,15.0,0.038
+LightGBM E,D + sweat sensor (investigational),302,0.878,0.995,0.0063,0.814,0.828,0.995,0.99,13.0,14.0,0.032

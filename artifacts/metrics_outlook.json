@@ -1,0 +1,87 @@
+{
+  "config": "D",
+  "inputs": "B + symptom check-ins (main model)",
+  "model": "lgbm",
+  "n_features": 290,
+  "auroc": 0.9749038122949089,
+  "pr_auc": 0.8614629591331405,
+  "brier": 0.013745198590869584,
+  "f1": 0.7943870590528163,
+  "sensitivity": 0.7387403715450839,
+  "specificity": 0.9941680915657606,
+  "precision": 0.8591000105385183,
+  "positive_rate": 0.04592348444178101,
+  "n_rows": 240291,
+  "onsets": 411,
+  "onsets_detected": 409,
+  "event_sensitivity": 0.9951338199513382,
+  "median_lead_time_days": 14.0,
+  "mean_lead_time_days": 13.268948655256724,
+  "median_episode_lead_days": 20.0,
+  "false_alarms": 305,
+  "patient_months": 7893.922470433639,
+  "false_alarms_per_patient_month": 0.03863731891747923,
+  "amber_20pct": {
+    "event_sensitivity": 0.9951338199513382,
+    "median_lead_time_days": 14.0,
+    "false_alarms_per_patient_month": 0.07942819331560484
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "threshold": 0.3403600863158734,
+      "calibration": {
+        "a": 0.9865985488861304,
+        "b": -0.6500442417352094
+      },
+      "n_fit_patients": 512,
+      "n_val_patients": 128,
+      "best_iteration": 226
+    },
+    {
+      "fold": 1,
+      "threshold": 0.35510952738903934,
+      "calibration": {
+        "a": 0.7637020342193479,
+        "b": -0.5026859797574481
+      },
+      "n_fit_patients": 512,
+      "n_val_patients": 128,
+      "best_iteration": 450
+    },
+    {
+      "fold": 2,
+      "threshold": 0.5557156334214758,
+      "calibration": {
+        "a": 0.9797060878757896,
+        "b": -0.5994317791005336
+      },
+      "n_fit_patients": 512,
+      "n_val_patients": 128,
+      "best_iteration": 211
+    },
+    {
+      "fold": 3,
+      "threshold": 0.47113400341710676,
+      "calibration": {
+        "a": 0.9559150546917775,
+        "b": -0.6891834334786964
+      },
+      "n_fit_patients": 512,
+      "n_val_patients": 128,
+      "best_iteration": 267
+    },
+    {
+      "fold": 4,
+      "threshold": 0.5118378426124675,
+      "calibration": {
+        "a": 0.7821063961179716,
+        "b": -0.7136518061642233
+      },
+      "n_fit_patients": 512,
+      "n_val_patients": 128,
+      "best_iteration": 370
+    }
+  ],
+  "target": "flare_within_28d"
+}
